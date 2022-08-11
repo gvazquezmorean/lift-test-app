@@ -1,1 +1,1 @@
-customTools = ["./lift/failing_tool.py"]
+customTools = ["./failing_tool.py"]
