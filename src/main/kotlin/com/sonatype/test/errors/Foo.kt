@@ -8,10 +8,11 @@ class Foo {
         throw IllegalStateException() // exception should not be thrown here
     }
 
-    fun foo(bar: Int) {
-        if (bar < 1) {
-            throw Exception() // too generic exception thrown here
-        }
-        // ...
+}
+
+fun foo(bar: Int) {
+    if (bar < 1) {
+        throw Exception() // too generic exception thrown here
     }
+    // ...
 }
