@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+import os
 
 def emit_version():
     print(1)
@@ -13,7 +14,7 @@ def emit_applicable():
     print("true")
 
 def run(path):
-    print('[{\"type\" : \"lift test\",\"message\" : \"testing lift\", \"file\" : \"src/main/kotlin/com/sonatype/test/TestApplication.kt\",\"line\" : 1}]')
+    print('[{\"type\" : \"lift test\",\"message\" : \"testing lift\", \"file\" : '+ os.getcwd()+'/failing_tool.py\",\"line\" : 1}]')
     # raise Exception('Feeling under the weather')
 
 def main():
