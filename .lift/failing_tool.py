@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import argparse
-import os
 
 def emit_version():
     print(1)
@@ -13,19 +12,15 @@ def emit_name():
 def emit_applicable():
     print("true")
 
-def run(path):
+def run():
     print('[{\"type\" : \"lift test\",\"message\" : \"testing lift\", \"file\" : \".lift/failing_tool.py\",\"line\" : 1}]')
     # raise Exception('Feeling under the weather')
 
 def main():
     parser = argparse.ArgumentParser(description='Failing Tool')
-    parser.add_argument('path', metavar='PATH', help='Path to code')
-    parser.add_argument('commit_hash', metavar='HASH', help='Commit hash')
     parser.add_argument('command', metavar='COMMAND', help='Command')
 
     args = parser.parse_args()
-
-    path = args.path
 
     command = args.command
 
@@ -36,7 +31,7 @@ def main():
     elif command == "applicable":
         emit_applicable()
     elif command == "run":
-        run(path)
+        run()
 
 if __name__ == "__main__":
     main()
