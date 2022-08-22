@@ -4,10 +4,8 @@ import argparse
 def emit_version():
     print("1")
 
-
 def emit_name():
     print("failing_tool")
-
 
 def emit_applicable():
     print("true")
