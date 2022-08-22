@@ -2,7 +2,7 @@
 import argparse
 
 def emit_version():
-    print(1)
+    print("1")
 
 
 def emit_name():
